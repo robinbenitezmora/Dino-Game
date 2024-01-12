@@ -6,10 +6,16 @@ import javax.swing.Timer;
 
 import java.awt.Component;
 import java.awt.Frame;
+import java.awt.Graphics2D;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener; // Import the ActionListener class
 import java.awt.event.KeyListener;
 import java.awt.Color;
+import java.awt.Color;
+import java.awt.Color;
+import java.awt.Color;
+import java.awt.Graphics; // Add missing import statement
+import java.awt.Graphics; // Add missing import statement
 
 class Game extends Frame implements KeyListener {
    final int D_W = 1200;
@@ -117,21 +123,14 @@ class Game extends Frame implements KeyListener {
 
    class DrawPanel extends Component {
       public void paint(Graphics g) {
-         Graphics2D g2 = (Graphics2D) g;
-         g2.setColor(colorDinosaur);
-         g2.fillRect(currentDinosaurX, currentDinosaurY, 50, 50);
-         if (gameOver) {
-            g2.setColor(colorGameOver1);
-            g2.fillRect(0, 0, D_W, D_H);
-            g2.setColor(colorGameOver2);
-            g2.drawString("Game Over", D_W / 2, D_H / 2);
-         }
-         for (MyGraph MyGraph : MyGraphs) {
-            g2.setColor(colorCactus1);
-            g2.fillRect(MyGraph.x, MyGraph.y, 50, 50);
-            g2.setColor(colorCactus2);
-            g2.fillRect(MyGraph.x + 10, MyGraph.y + 10, 30, 30);
-         }
+         // ...
+
+         // ...
+
+         g2.setColor(Color.GREEN); // Replace Color.colorCactus1 with a valid color constant from the Color class
+         g2.fillRect(MyGraph.x, MyGraph.y, 50, 50);
+         g2.setColor(Color.GREEN); // Replace Color.colorCactus2 with a valid color constant from the Color class
+         g2.fillRect(MyGraph.x + 10, MyGraph.y + 10, 30, 30);
       }
    }
 
